@@ -7,6 +7,7 @@ import Registration from "./components/Registration.jsx";
 import Login from "./components/Login.jsx";
 import Home from "./components/Home.jsx";
 import ChangePassword from "./components/ChangePassword";
+import Profile from "./components/Profile";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 	{
 		path: "/reset",
 		element: <ChangePassword />,
+	},
+	{
+		path: "/profile",
+		element: <Profile />,
 	},
 ]);
 

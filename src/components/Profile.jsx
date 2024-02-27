@@ -1,5 +1,5 @@
 // Import React, useState, useEffect, and axios
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Import navigation for redirecting the user to other pages
@@ -10,7 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaThumbsUp } from "react-icons/fa";
 // Define the Home component
-const Home = () => {
+const Profile = () => {
 	// Define the state variable for the users data
 	const [users, setUsers] = useState([]);
 
@@ -142,11 +142,18 @@ const Home = () => {
 					<div className="flex space-x-4">
 						{isAuthenticated ? (
 							// If the user is authenticated, show the logout button
-							<button
-								onClick={handleLogout}
-								className="bg-blue-600 text-white px-3 py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
-								Logout
-							</button>
+							<>
+								<Link
+									to="/reset"
+									className="bg-blue-600  text-white px-4 py-2  hover:bg-blue-700 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600">
+									reset password
+								</Link>
+								<button
+									onClick={handleLogout}
+									className="bg-blue-600 text-white px-3 py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
+									Logout
+								</button>
+							</>
 						) : (
 							// If the user is not authenticated, show the register and login buttons
 							<>
@@ -172,7 +179,7 @@ const Home = () => {
 							className="border border-slate-100 rounded-lg overflow-hidden">
 							<img
 								src={user.image_link}
-								className="object-cover w-full h-64 mb-1 rounded-md"
+								className="object-contain object-center w-full h-64 mb-1 rounded-md"
 								alt={user.username}
 							/>
 							<div className="p-4">
@@ -205,4 +212,4 @@ const Home = () => {
 };
 
 // Export the Home component
-export default Home;
+export default Profile;
