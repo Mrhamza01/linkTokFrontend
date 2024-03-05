@@ -13,7 +13,7 @@ import { Link, useNavigate } from "react-router-dom";
 import image from "../images/image.png";
 
 // Define the Register component
-const Register = () => {
+const Signup = () => {
 	// Define the state variables for the form inputs
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
@@ -202,4 +202,4 @@ const Register = () => {
 };
 
 // Export the Register component
-export default Register;
+export default Signup;
